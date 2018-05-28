@@ -1,0 +1,20 @@
+<div class="ui left demo vertical inverted sidebar labeled icon menu">
+	{{- if gt (len (where .Site.RegularPages "Section" "==" .Site.Params.contentType)) 0 -}}
+	<a class="item" href="/{{ .Site.Params.contentType }}">
+		<i class="inverted big link file icon" title="{{ i18n "archives" }}"></i>
+		Archive
+	</a>
+	{{ end }}
+	{{- if .Site.Params.enableTags -}}
+	<a class="item" href="/tags">
+		<i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
+		Tags
+	</a>
+	{{ end }}
+	{{- if .Site.Params.enableCategories -}}
+	<a class="item" href="/categories">
+		<i class="inverted big link sitemap icon" title="{{ i18n "allCategories" }}"></i>
+		Categories
+	</a>
+	{{ end }}
+</div>
