@@ -35,13 +35,6 @@
 				{{ partial "anchor.html" .Content }}
 			</article>
 		</section>
-		<section class="ui secondary attached segment dream-tags">
-			{{- if isset .Params "tags" -}}
-				{{- partial "tags.html" . -}}
-			{{ else }}
-			<span>{{ i18n "noTag" }}</span>
-			{{ end }}
-		</section>
 		{{- if .Site.Params.enableShareCard -}}
 		<section class="ui secondary {{ if not .Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
 			{{- partial "share.html" . -}}
@@ -57,4 +50,5 @@
 		{{ end }}
 	</div>
 </div>
+{{ partial "footer.html" . }}
 {{ end }}

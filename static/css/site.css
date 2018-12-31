@@ -416,6 +416,21 @@ img[src$='#floatleft']
     box-shadow: none!important;
 }
 
+img[src$='#floatright']
+{
+    float: right;
+    margin: 1.0rem 1.0rem!important;
+    width: 25%;
+    border:1px solid #021a40;
+    box-shadow: none!important;
+}
+
+.kd_badge {
+    float: right;
+    width: auto;
+    box-shadow: none;
+}
+
 #mc_embed_signup input.email
 {
     width: 20rem!important;
