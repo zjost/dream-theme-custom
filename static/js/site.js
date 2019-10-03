@@ -1,8 +1,6 @@
-//var SemanticUIColors = "red orange yellow olive green teal blue violet purple pink brown".split(" ");
-
 $(document).ready(function() {
   $(".ui.accordion").accordion();
-  setSemanticUIColor();
+  //setSemanticUIColor();
   $("#tag-category-pop").click(function() {
     $(".hand.point.icon").toggleClass("active");
   });
@@ -33,14 +31,3 @@ function randomInt(a, b) {
   b = Math.floor(b);
   return random = Math.floor(Math.random() * (b - a)) + a;
 }
-
-/*
-function setSemanticUIColor() {
-  for (var a = [$(".dream-tags"), $(".sidebar-dream-tags")], b = 0; b < a.length; b++) {
-    a[b].children().map(function() {
-      //$(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)]);
-      $(this).addClass("blue");
-    });
-  }
-}
-*/

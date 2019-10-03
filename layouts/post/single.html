@@ -7,8 +7,8 @@
 {{ end }}
 {{ define "main" }}
 <div class="ui centered grid">
-	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
-		<section class="ui secondary top attached black segment post-head">
+	<div class="sixteen wide mobile fifteen wide tablet fourteen wide computer column post-list">
+		<section class="ui secondary top attached segment post-head">
 			<h1 class="post-title">
 				{{ .Title }}
 			</h1>
@@ -36,7 +36,7 @@
 			</article>
 		</section>
 		{{- if .Site.Params.enableShareCard -}}
-		<section class="ui secondary {{ if not .Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
+		<section class="ui secondary {{ if not .Site.DisqusShortname }}bottom{{ end }} segment share row box authorbox">
 			{{- partial "share.html" . -}}
 		</section>
 		<section class="ui secondary attached segment copyright">
@@ -50,5 +50,7 @@
 		{{ end }}
 	</div>
 </div>
-{{ partial "footer.html" . }}
+<footer class="ui bottom attached center aligned inverted segment">
+	{{- partial "footer.html" . -}}
+</footer>
 {{ end }}

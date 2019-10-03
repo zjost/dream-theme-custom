@@ -263,8 +263,14 @@ li:not('.toc') {
 }
 
 .ui.secondary.segment {
-  background-color: #ececece8;
-  padding: auto 1.5em 0 1.5em;
+  /*background-color: #ececece8;*/
+  background-color: white;
+  padding: 2em 2em;
+  border: 0px;
+}
+
+.ui.secondary.authorbox {
+  border: 2px solid #8a8a8a6b;
 }
 
 .ui.grid {
@@ -329,8 +335,8 @@ ul > li {
 }
 
 .toc {
-  font-size: 1.1rem;
-  line-height: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
   background-color: #ffffff70;
   border: 1px solid #8a8a8a6b;
   border-radius: 5px;
@@ -345,9 +351,10 @@ ul > li {
 }
 
 .post-content {
-  font-size: 1.2rem;
-  letter-spacing: 0.01rem;
-  word-spacing: 0.10rem;
+  font-size: 1.5rem;
+  font-family: Georgia;
+  letter-spacing: 0.02rem;
+  word-spacing: 0.15rem;
 }
 
 .post-content blockquote {
@@ -362,20 +369,22 @@ ul > li {
 }
 
 .post-content li {
-    margin-bottom: 0.7em;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    line-height: 1.2em;
 }
 
 .post-content code {
-  font-size: 0.8em;
+  /*font-size: 0.8em;*/
   background-color: #c0c9c833;
   padding: 0 0.2em;
   border: 1px solid #929696;
-  border-radius: 0.2em;
+  /*border-radius: 0.2em;*/
 }
 
 .post-content pre code {
   font-family: 'Inconsolata';
-  font-size: 1.2em;
+  font-size: 1.0em;
   background-color: unset;
   padding: initial;
   border: unset;
@@ -398,9 +407,42 @@ p > img:not(.emoji), li > img {
 img[src$='#center']
 {
     display: block;
-    margin: auto auto;
+    margin: 2em auto;
     width: 80%;
     border:1px solid #021a40;
+    box-shadow: none!important;
+    /* Browser specific implementations */
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+}
+
+img[src$='#center-no-border']
+{
+    display: block;
+    margin: auto auto;
+    width: 80%;
+    box-shadow: none!important;
+    /* Browser specific implementations */
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+}
+
+img[src$='#no-shadow']
+{
+    display: block;
+    margin: auto auto;
+    /*width: 80%;*/
+    border:1px solid #021a40;
+    box-shadow: none!important;
+    /* Browser specific implementations */
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+}
+
+img[src$='#latex']
+{
+    display: block;
+    margin: auto auto;
     box-shadow: none!important;
     /* Browser specific implementations */
     -moz-box-shadow: none!important;
@@ -476,7 +518,7 @@ img[src$='#floatright']
   background-color: #ffffff70;
   border: 1px solid #8a8a8a6b;
   border-radius: 5px;
-  overflow-x: auto;
+  overflow-x: visible;
 }
 .highlight {
   border-radius: 5px;
